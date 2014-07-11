@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+body {
+	background: #eee;
+}
+
+div.famous-container {
+    z-index: 100;
+}
+
+svg#core-network-d3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+	
+	/* Deep Blue Background Gradient */
+/*	background: -moz-linear-gradient(-45deg, rgba(36,52,79,0.88) 0%, rgba(32,92,181,0.88) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(36,52,79,0.88)), color-stop(100%,rgba(32,92,181,0.88))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, rgba(36,52,79,0.88) 0%,rgba(32,92,181,0.88) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, rgba(36,52,79,0.88) 0%,rgba(32,92,181,0.88) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, rgba(36,52,79,0.88) 0%,rgba(32,92,181,0.88) 100%); /* IE10+ */
+	background: linear-gradient(135deg, rgba(36,52,79,0.88) 0%,rgba(32,92,181,0.88) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c424344f', endColorstr='#c4205cb5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+*/
+	/* Lighter Blue BG Gradient 
+	background: -moz-linear-gradient(-45deg, rgba(30,87,153,0.88) 0%, rgba(41,137,216,0.88) 50%, rgba(125,185,232,0.88) 100%); 
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(30,87,153,0.88)), color-stop(50%,rgba(41,137,216,0.88)), color-stop(100%,rgba(125,185,232,0.88))); 
+	background: -webkit-linear-gradient(-45deg, rgba(30,87,153,0.88) 0%,rgba(41,137,216,0.88) 50%,rgba(125,185,232,0.88) 100%); 
+	background: -o-linear-gradient(-45deg, rgba(30,87,153,0.88) 0%,rgba(41,137,216,0.88) 50%,rgba(125,185,232,0.88) 100%); 
+	background: -ms-linear-gradient(-45deg, rgba(30,87,153,0.88) 0%,rgba(41,137,216,0.88) 50%,rgba(125,185,232,0.88) 100%); 
+	background: linear-gradient(135deg, rgba(30,87,153,0.88) 0%,rgba(41,137,216,0.88) 50%,rgba(125,185,232,0.88) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c41e5799', endColorstr='#c47db9e8',GradientType=1 ); 
+	*/
+
+}
+
+/* LARGE TETRAHEXA SET */
+.outer.symbol { 
+	width: 166px;
+	height: 210px;
+	zoom: 80%;
+	position:relative;
+	margin: 0px auto;
+	opacity: 0.2;
+}
+
+/* MINI TETRAHEXA SET */
+.inner.symbol { 
+	width: 77px;
+	height: 77px;
+	zoom: 80%;
+	position:absolute;
+	margin: 0px auto;
+	background-size: 100% !important;
+	bottom: 21px;
+	left: 22px;
+}
+
+/* Core Network navigation icon */
+#core-network-launcher {
+	position: fixed;
+	width: 84px;
+	height: 88px;
+	z-index: 33;
+	right: 25px;
+	bottom: 20px;
+	cursor: pointer;
+    background: url(../img/corenetwork-icon.png);
+}
+
+/* Core Network navigation icon */
+#core-network-close {
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	z-index: 200;
+	left: 25px;
+	top: 20px;
+	cursor: pointer;
+    background: url(../img/close_button.png);
+}
+
+text, textArea {
+  font-family: "Open Sans",Arial,sans-serif;
+  /*font-size: 16px;*/
+  
+  fill: rgb(255, 255, 255);
+}
+text.node_name {
+  text-shadow: 1px 1px 1px #000;
+}
+span.node_name {
+  text-shadow: 1px 1px 1px #fff;
+  position: absolute;
+  top: 55%; 
+  font-size: 64%;
+  left: 0%;
+  text-align: center;
+  width: 100%;
+  z-index:10;
+}
+img.node_tile {
+  position:absolute;
+  z-index:0;
+}
+
+img.node_symbol, img.vertical_symbol_section {
+  position: absolute;
+  left: 25%;
+  z-index:100;
+}
+
+img.node_symbol {
+  top: 10%;
+}
+
+img.vertical_symbol_section.top {
+  top: 10%;
+}
+
+img.vertical_symbol_section.bottom {
+  top: 36%;
+}
+
+path.hexagon {
+  /*fill: rgb(0, 182, 245);*/
+  /*fill: url('core-network.svg#radialgradient-blue'); */
+  /* not working... not sure why.  stack overflow responses say you need a direct url to the file that references the svg:
+	http://stackoverflow.com/questions/6956767/css-3-gradients-for-styling-svg-elements
+	*/
+  shape-rendering: auto;
+  /*fill is set in JS, see config option in JS tag*/
+  /*stroke: rgb(137,203,232);*/
+  stroke-width: 2.618033988px;
+  stroke-opacity: 0.777;
+  fill-opacity: 0.7;
+  fill-rule:evenodd;
+}
+
+g.node:hover path.hexagon {
+	fill-opacity: 1;
+	/* fill: rgb(27, 87, 175);
+	fill: rgb(80, 138, 199); */
+	fill: rgba(178,170,164,0.7);
+	/* fill: url('/#radialgradient-bluehover'); */
+	/*stroke: rgba(217,213,210,0.64);*/
+  	stroke-width: 1.61803398875px;
+	/* FAIL - HEX Disappears
+	transform-origin: center center;
+  	transform: scale(0.3); 
+	*/
+}
+
+stop.center {
+	stop-color:rgb(137,203,232);stop-opacity:0;
+}
+stop.periphery {
+	stop-color:rgb(86,171,215);stop-opacity:1;
+}
+
+/*test white/grey gradient */
+stop.periphery {
+	stop-color:hsl(300,0%,50%);stop-opacity:0.77;
+}
+
+/* Reveal JS */
+
+.reveal .controls {
+	display: none;
+	position: fixed;
+	width: 110px;
+	height: 110px;
+	z-index: 30;
+	right: 121px;
+	bottom: 10px;
+}

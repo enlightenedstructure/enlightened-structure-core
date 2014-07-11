@@ -1,0 +1,84 @@
+svg#core-network-d3 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+	
+	/* Deep Blue Background Gradient */
+	background: -moz-linear-gradient(-45deg, rgba(36,52,79,0.88) 0%, rgba(32,92,181,0.88) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(36,52,79,0.88)), color-stop(100%,rgba(32,92,181,0.88))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, rgba(36,52,79,0.88) 0%,rgba(32,92,181,0.88) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, rgba(36,52,79,0.88) 0%,rgba(32,92,181,0.88) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, rgba(36,52,79,0.88) 0%,rgba(32,92,181,0.88) 100%); /* IE10+ */
+	background: linear-gradient(135deg, rgba(36,52,79,0.88) 0%,rgba(32,92,181,0.88) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c424344f', endColorstr='#c4205cb5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	/* Lighter Blue BG Gradient 
+	background: -moz-linear-gradient(-45deg, rgba(30,87,153,0.88) 0%, rgba(41,137,216,0.88) 50%, rgba(125,185,232,0.88) 100%); 
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(30,87,153,0.88)), color-stop(50%,rgba(41,137,216,0.88)), color-stop(100%,rgba(125,185,232,0.88))); 
+	background: -webkit-linear-gradient(-45deg, rgba(30,87,153,0.88) 0%,rgba(41,137,216,0.88) 50%,rgba(125,185,232,0.88) 100%); 
+	background: -o-linear-gradient(-45deg, rgba(30,87,153,0.88) 0%,rgba(41,137,216,0.88) 50%,rgba(125,185,232,0.88) 100%); 
+	background: -ms-linear-gradient(-45deg, rgba(30,87,153,0.88) 0%,rgba(41,137,216,0.88) 50%,rgba(125,185,232,0.88) 100%); 
+	background: linear-gradient(135deg, rgba(30,87,153,0.88) 0%,rgba(41,137,216,0.88) 50%,rgba(125,185,232,0.88) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c41e5799', endColorstr='#c47db9e8',GradientType=1 ); 
+	*/
+
+}
+
+.node_name {
+  font-family: "Open Sans",Arial,sans-serif;
+  /*font-size: 16px;*/
+  fill: rgb(255, 255, 255);
+}
+
+.hexagon {
+  /*fill: rgb(0, 182, 245);*/
+  /*fill: url('core-network.svg#radialgradient-blue'); */
+  /* not working... not sure why.  stack overflow responses say you need a direct url to the file that references the svg:
+	http://stackoverflow.com/questions/6956767/css-3-gradients-for-styling-svg-elements
+	*/
+  /*stroke: rgb(137,203,232);*/
+  stroke-width: 1px;
+  shape-rendering: auto;
+  fill-opacity: 0.7;
+}
+
+.node:hover .hexagon {
+	fill-opacity: 0.7;
+	/* fill: rgb(27, 87, 175);
+	/* fill: rgb(80, 138, 199); Dark blue */
+	fill: rgb(0, 223, 255);
+	/* fill: url('/#radialgradient-bluehover'); */
+ 	/*stroke: rgb(255,255,255);*/
+    stroke-width: 1px;
+	/* FAIL - HEX Disappears
+	transform-origin: center center;
+  	transform: scale(0.3);
+	*/
+}
+.node:hover .node_name {
+	fill: rgb(27, 87, 175);
+}
+
+.node:active .hexagon {
+	fill-opacity: 0.7;
+	/* fill: rgb(27, 87, 175);
+	/* fill: rgb(80, 138, 199); Dark blue */
+	fill: rgb(0, 223, 255);
+	/* fill: url('/#radialgradient-bluehover'); */
+  	/*stroke: rgb(255,255,255);*/
+  	stroke-width: 1px;
+	/* FAIL - HEX Disappears
+	transform-origin: center center;
+  	transform: scale(0.3);
+	*/
+}
+
+stop.center {
+	stop-color:rgb(137,203,232);stop-opacity:0;
+}
+stop.periphery {
+	stop-color:rgb(86,171,215);stop-opacity:1;
+}

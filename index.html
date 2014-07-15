@@ -291,7 +291,7 @@
     data-core-source="reveal"
     data-symbol-path=""
     data-hide-until-launch="true"
-    data-renderer="D3"
+    data-renderer="Famous"
     data-hex-fill="url(#radialgradient-blue)"
     data-hide-until-launch="true"
     data-launch-button="true"
@@ -299,20 +299,8 @@
     data-show-node-names="true"
     ></div>
 
-  <svg id="core-network-d3" width="1000" height="600">
-    <defs>
-      <radialGradient id="radialgradient-blue" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-        <stop offset="0%" class="center" />
-        <stop offset="100%" class="periphery" />
-      </radialGradient>
-    </defs>
-   <!-- <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#radialgradient-blue)" /> -->
-  </svg>
 
-  <!-- Note that this URL has been unreliable: http://d3js.org/d3.v3.min.js -->
-  <script type="text/javascript" src="/lib/d3/d3.v3.min.js" charset="utf-8"></script>
-
-  <script type="text/javascript" src="http://assets.corenetwork.is/js/bundle.js"></script>
+  <script type="text/javascript" src="http://localhost:8080/bundle.js"></script>
 
   <script type="text/javascript" src="/lib/reveal-js/lib/js/head.min.js"></script>
   <script type="text/javascript" src="/lib/reveal-js/js/reveal.js"></script>

@@ -1,0 +1,10 @@
+#Options All -Indexes
+
+RewriteEngine on
+RewriteRule ^BaseParadigm http://baseparadigm.org/ [R,L]
+RewriteRule ^Core_Network /#/Core-Network [NE,R,L]
+RewriteRule ^ForkDiffMerge /#/Massively-Parallel-Academic-Research-System [NE,R,L]
+RewriteRule ^Software_Zero /#/Massively-Parallel-Academic-Research-System [NE,R,L]
+RewriteRule ^Massively_Parallel_Academic_Research_Collaboration_System /#/Massively-Parallel-Academic-Research-System [NE,R,L]
+RewriteRule ^Trust_Exchange /#/Trust-Exchange [NE,R,L]
+

@@ -9,8 +9,6 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-  <link rel="stylesheet" type="text/css" href="/lib/famous/core/famous.css" />
-
   <link rel="stylesheet" href="/lib/reveal-js/css/reveal.css">
   <!-- For syntax highlighting -->
   <link rel="stylesheet" href="/lib/reveal-js/lib/css/zenburn.css">
@@ -19,14 +17,11 @@
 
   <script type="text/javascript" src="/lib/jquery.js"></script>
 
-  <script type="text/javascript" src="/lib/famous-polyfills/functionPrototypeBind.js"></script>
-  <script type="text/javascript" src="/lib/famous-polyfills/classList.js"></script>
-  <script type="text/javascript" src="/lib/famous-polyfills/requestAnimationFrame.js"></script>
-
   <!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script-->
   <script type="text/javascript" src="/lib/jquery.js"></script>
 
   <!--script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script-->
+  <script type="text/javascript" src="/lib/d3/d3.v3.min.js" charset="utf-8"></script>
 
   <!--[if lt IE 9]>
     <script src="/lib/reveal-js/lib/js/html5shiv.js"></script>
@@ -300,11 +295,11 @@
   <div
     class="core-network"
     data-core-source="reveal"
-    data-renderer="Famous"
+    data-renderer="D3"
     data-hex-fill="url(#radialgradient-blue)"
     data-hide-until-launch="true"
     data-launch-button="true"
-    data-close-button="true"
+    data-close-button="false"
     ></div>
 
   <script type="text/javascript" src="/lib/reveal-js/lib/js/head.min.js"></script>

@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
 /**
- * Light theme, developed for http://enlightenedstructure.org 
+ * Light theme, developed for http://enlightenedstructure.org
  *
  * Based on Sky theme for reveal.js.
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
@@ -11,7 +11,7 @@
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-html { 
+html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -25,7 +25,7 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/backgroun
 
 body {
 	background: #000 url(../img/background.jpg) center center fixed no-repeat;
-    background-position: center; 
+    background-position: center;
     background-size: 100%;
   /*background: #add9e4;*/
   /*background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);*/
@@ -50,7 +50,7 @@ html, body {min-height:100%; padding:0; margin:0;}
 
 #header {margin-top:-100px; height:100px; }
 #footer {margin-bottom:-100px; height:100px; }
-p {margin:0; padding:0 0 1em 0;} 
+p {margin:0; padding:0 0 1em 0;}
 /* had to take the margin off the p as in some browsers this can add extra margin to #content div*/
 
 #logo {
@@ -70,7 +70,7 @@ p {margin:0; padding:0 0 1em 0;}
 	left: 20px;
 	opacity: 0.9;
 	font-size:12px;
-	text-shadow:1px 1px 1px #000;		 
+	text-shadow:1px 1px 1px #000;
 }
 #tour-instructions p {
 	margin-bottom: -25px;
@@ -79,14 +79,14 @@ p {margin:0; padding:0 0 1em 0;}
   color: white;
   background: #134674;
   text-shadow: none; }
-  
+
  img.exit_deck {
   position: relative;
   top: 30px;
   left: 30px;
-  display: block;	 
+  display: block;
  }
- 
+
 #core-network-launcher {
 	position: fixed;
 	width: 84px;

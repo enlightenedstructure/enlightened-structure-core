@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "npm run start & npm run watch",
-    "publish": "bin/publish",
+    "publish": "coffee bin/publish",
     "start": "harp server --port ${PORT:=9000} src",
     "watch": "browser-sync start --port 8080 --proxy \"localhost:${PORT:=9000}\" --files 'src/**/*'"
   },

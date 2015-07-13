@@ -1,4 +1,6 @@
 /.env
+/node_modules/
 /Thorfile
 .DS_Store
+npm-debug.log
 Thumbs.db

@@ -3,9 +3,10 @@
 ghpages = require 'gh-pages'
 path = require 'path'
 require 'shelljs/global'
+{p} = require 'lightsaber'
 
 root = path.join __dirname, '..'
-basePath = root
+src = path.join root, 'src'
 
 options =
   logger: console.log
@@ -20,5 +21,5 @@ handle_error = (error) ->
     console.error error
     process.exit Number(error.errno) or 1
 
-exec "rm -rf #{root}/node_modules/gh-pages/.cache"
-ghpages.publish dist, options, handle_error
+exec "rm -rf #{path.join root, '/node_modules/gh-pages/.cache'}"
+ghpages.publish src, options, handle_error

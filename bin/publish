@@ -2,8 +2,10 @@
 
 ghpages = require 'gh-pages'
 path = require 'path'
+require 'shelljs/global'
 
-dist = path.join __dirname, '..'
+root = path.join __dirname, '..'
+basePath = root
 
 options =
   logger: console.log
@@ -18,4 +20,5 @@ handle_error = (error) ->
     console.error error
     process.exit Number(error.errno) or 1
 
+exec "rm -rf #{root}/node_modules/gh-pages/.cache"
 ghpages.publish dist, options, handle_error

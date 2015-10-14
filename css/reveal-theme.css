@@ -97,6 +97,7 @@ p {margin:0; padding:0 0 1em 0;}
 	cursor: pointer;
 	background: url(../img/corenetwork-icon.png) top center no-repeat;
 }
+
 #core-network-launcher span {
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
@@ -107,8 +108,13 @@ p {margin:0; padding:0 0 1em 0;}
 	-o-transition:      opacity 0.5s ease;
 	transition:			opacity 0.5s ease;
 }
+
 #core-network-launcher:hover span{
 	opacity: 1;
+}
+
+.core-network g {
+  opacity: 0;
 }
 
 /*********************************************

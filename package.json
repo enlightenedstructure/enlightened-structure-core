@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "npm run start & npm run watch",
     "publish": "coffee bin/publish",
-    "start": "harp server --port ${PORT:=9000} src",
+    "start": "harp server --port ${PORT:=9000} .",
     "test": "curl -I http://www.enlightenedstructure.net/",
-    "watch": "browser-sync start --port 8080 --proxy \"localhost:${PORT:=9000}\" --files 'src/**/*'"
+    "watch": "browser-sync start --port 8080 --proxy \"localhost:${PORT:=9000}\" --files '**/*'"
   },
   "author": "Harlan T Wood",
   "devDependencies": {
